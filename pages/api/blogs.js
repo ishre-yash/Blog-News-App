@@ -5,6 +5,7 @@ export default async function handler(req, res) {
     let data = await fs.promises.readdir("blogdata");
     let myfile; 
     let allBlogs = [];
+    data = data.slice(0, parseInt(req.query.count))
       for (let index = 0; index < data.length; index++) {
         const item = data[index];
           // console.log(item)
