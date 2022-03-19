@@ -2,6 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
+      <>
     <footer className="text-center lg:text-left bg-white border-t border-gray-400 shadow">
         <div className="flex justify-center items-center lg:justify-between p-6 border-b border-gray-300">
             <div className="mr-12 hidden lg:block">
@@ -84,6 +85,8 @@ function Footer() {
             <a className="text-gray-600 hover:underline " href="https://github.com/ishre-yash"> ShreYash.</a> All rights reserved.
         </div>
     </footer>
+    
+    </>
   )
 }
 

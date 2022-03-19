@@ -36,7 +36,7 @@ const Blog = (props) => {
             {blogs.map((blogitem) => {
               return (
                 <div key={blogitem.slug} className="p-4 lg:w-1/3">
-                  <div className="h-full bg-white bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+                  <div className="h-full bg-white px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
                     <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
                       CATEGORY
                     </h2>
