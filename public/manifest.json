@@ -1,0 +1,32 @@
+{
+    "theme_color": "#000000",
+    "background_color": "#ffffff",
+    "display": "fullscreen",
+    "scope": "/",
+    "start_url": "/",
+    "name": "ShreYash",
+    "short_name": "SY",
+    "description": "Programming has always been my passion! I have been doing it for years and I enjoy what I do. My best languages are Python ,React , Javascript and I also learn UI/UX Design. However, I can excel in all the languages I provided. I am a fast learner and I believe that any project always needs a lot of testing before it goes through the acceptance testing, since that is what makes projects successful. I am very friendly, and my motto is not to think outside the box but build a bigger box!.",
+    "icons": [
+        {
+            "src": "/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
