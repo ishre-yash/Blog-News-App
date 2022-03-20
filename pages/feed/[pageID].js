@@ -92,7 +92,7 @@ export const getServerSideProps = async (pageContext) => {
 
   // Fetching Data
   const apiResponse = await fetch(
-    `https://newsapi.org/v2/top-headlines?sources=techcrunch&page=${pageNumber}`,
+    `https://newsapi.org/v2/top-headlines?sources=techcrunch&pageSize=8&page=${pageNumber}`,
     {
       headers: {
         Authorization: "ae12b258a7ce4f5b9698c93198d0d34d",
