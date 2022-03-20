@@ -11,13 +11,12 @@ const Slug = (props) => {
   const [blog, setBlog] = useState(props.myBlog);
   
 
-  return <div className={styles.container}>
-    <main className={styles.main}>
-      <h1>{blog && blog.title}</h1>
-      <hr />
-      { blog && <div dangerouslySetInnerHTML={createMarkup(blog.content)}></div>}
-    </main>
-  </div>;
+  return <section  className="container w-full md:max-w-3xl mx-auto pt-20 lg:pt-28">
+    <div  className="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal font-poppins">
+    <h1  className="font-bold break-normal text-gray-900 pt-6 pb-2 text-4xl md:text-4xl">{blog && blog.title}</h1>
+      { blog && <p  className="py-6 text-lg font-poppins select-none" dangerouslySetInnerHTML={createMarkup(blog.content)}></p>}
+      </div>
+  </section>;
 };
 
 export async function getStaticPaths() {
