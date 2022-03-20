@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 
 export const Feed = ({ pageNumber, articles }) => {
   const router = useRouter();
-  console.log(articles);
   return (
     <>
     <section class="text-gray-600 body-font">
@@ -43,8 +42,9 @@ export const Feed = ({ pageNumber, articles }) => {
         
         </div>
       </div>
+      <div className="w-full inline-flex justify-center items-center mb-6">
           <div
-            
+            className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l"
             onClick={() => {
               if (pageNumber > 1) {
                 router.push(`/feed/${pageNumber - 1}`);
@@ -54,10 +54,10 @@ export const Feed = ({ pageNumber, articles }) => {
             Previous Page
           </div>
 
-          <div>#{pageNumber}</div>
+          <div className="p-2 bg-gray-400">{pageNumber}</div>
 
           <div
-            
+            className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r"
             onClick={() => {
               if (pageNumber < 5) {
                 router
@@ -67,6 +67,7 @@ export const Feed = ({ pageNumber, articles }) => {
             }}
           >
             Next Page
+          </div>
           </div>
     </section>
 
@@ -92,7 +93,7 @@ export const getServerSideProps = async (pageContext) => {
 
   // Fetching Data
   const apiResponse = await fetch(
-    `https://newsapi.org/v2/top-headlines?sources=techcrunch&pageSize=8&page=${pageNumber}`,
+    `https://newsapi.org/v2/top-headlines?country=us&pageSize=8&page=${pageNumber}`,
     {
       headers: {
         Authorization: "ae12b258a7ce4f5b9698c93198d0d34d",
