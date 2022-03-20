@@ -16,10 +16,8 @@ const Blog = (props) => {
 
   return (
     <section className="text-gray-600 body-font">
-      <h1 className="text-4xl font-bold flex flex-col justify-center items-center text-blue-600 hover:text-blue-700 mt-4">
-        Blogs
-      </h1>
-
+      
+      
       <InfiniteScroll
         dataLength={blogs.length}
         next={fetchData}
@@ -32,11 +30,16 @@ const Blog = (props) => {
         }
       >
         <div className="container px-5 py-24 mx-auto">
+        <h1 className="text-4xl font-bold flex flex-col justify-center items-center text-blue-600 hover:text-blue-700 mb-5">
+        Blogs
+      </h1>
           <div className="flex flex-wrap -m-4">
+            
             {blogs.map((blogitem) => {
               return (
                 <div key={blogitem.slug} className="p-4 lg:w-1/3">
-                  <div className="h-full bg-white px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+                  
+                  <div className="h-full bg-white px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center ">
                     <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
                       CATEGORY
                     </h2>
